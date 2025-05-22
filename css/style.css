@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&family=VT323&display=swap');
+
+body {
+  font-family: 'VT323', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+#clock {
+  font-family: "Press Start 2P", monospace;
+  font-size: 60px;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0 #000;
+}
+
+#name-input {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1.5px dashed #00ffd5;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  font-family: 'VT323', monospace;
+  box-shadow: 0 0 6px #00ffd5;
+  transition: 0.3s ease;
+  width: 200px;
+}
+
+input::placeholder {
+  color: rgba(0, 255, 213, 0.7);
+  text-align: center;
+}
+
+#greeting {
+  font-family: 'Bungee', sans-serif;
+  font-size: 28px;
+  color: #ffffff;
+  text-shadow:
+    0 0 4px #00ffd5,
+    2px 2px 10px rgba(0, 0, 0, 0.85);
+  animation: flicker 1.5s infinite alternate;
+  margin-bottom: 15px;
+  font-size: 50px;
+}
+
+
+#quote {
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px #00ffd5;
+  font-family: 'VT323', monospace;
+  animation: glitch 1.5s infinite alternate;
+  max-width: 80%;
+  margin-top: 30px;
+}
+
+#weather {
+  position: absolute;
+  bottom: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'VT323', monospace;
+  color: #00ffd5;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 0 0 8px #00ffd5;
+  backdrop-filter: blur(2px);
+  border: 1px dashed #00ffd5;
+  transition: all 0.3s ease;
+}
+
+#quote {
+  font-family: 'VT323', monospace;
+  font-size: 28px;
+  color: #ffffff;
+  text-shadow: 2px 2px 0 #000, 4px 4px 0 #ff00ff;
+  margin-top: 30px;
+  animation: glitch 1.5s infinite alternate;
+  max-width: 80%;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  color: #f0f0f0;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border: 1px solid #00ffd5;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#todo-list button {
+  background: none;
+  border: none;
+  color: #00ffd5;
+  font-size: 16px;
+  cursor: pointer;
+  padding-left: 10px;
+  transition: 0.2s;
+}
+
+#todo-list button:hover {
+    color: white;
+    text-shadow: 0 0 5px #00ffd5;
+}
+
+.todo-section h2 {
+  font-family: 'Bungee', sans-serif;
+  font-size: 24px;
+  color: #00ffd5;
+  text-shadow:
+    0 0 2px #00ffd5,
+    0 0 4px #00ffd5,
+    2px 2px 0 rgba(0, 0, 0, 0.9),   /* 진한 외곽 그림자 */
+    4px 4px 10px rgba(0, 0, 0, 0.6); /* 퍼진 배경 어둡게 */
+  animation: neon-pulse 2s ease-in-out infinite alternate;
+  margin-bottom: 10px;
+}
+
+#todo-form input[type="text"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1.5px dashed #00ffd5;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  font-family: 'VT323', monospace;
+  box-shadow: 0 0 6px #00ffd5;
+  transition: 0.3s ease;
+  width: 200px;
+}
+
+#todo-form input[type="text"]::placeholder {
+  color: rgba(0, 255, 213, 0.7);
+  text-align: center;
+}
+
+#todo-form input[type="text"]:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 0 12px #00ffd5, 0 0 18px #00ffd5;
+}
+
+@keyframes neon-pulse {
+  0% {
+    text-shadow:
+      0 0 2px #00ffd5,
+      0 0 4px #00ffd5,
+      2px 2px 0 rgba(0, 0, 0, 0.9),
+      4px 4px 10px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    text-shadow:
+      0 0 8px #00ffd5,
+      0 0 12px #00ffd5,
+      2px 2px 0 rgba(0, 0, 0, 0.9),
+      4px 4px 10px rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0, 0);
+    color: #fff;
+  }
+  20% {
+    transform: translate(-1px, 1px);
+    color: #f0f;
+  }
+  40% {
+    transform: translate(1px, -1px);
+    color: #0ff;
+  }
+  60% {
+    transform: translate(-1px, 0);
+    color: #fff;
+  }
+  80% {
+    transform: translate(1px, 1px);
+    color: #f0f;
+  }
+  100% {
+    transform: translate(0, 0);
+    color: #fff;
+  }
+}
+
+@keyframes flicker {
+  0%   { opacity: 1; }
+  49%  { opacity: 0.9; }
+  50%  { opacity: 0.4; }
+  60%  { opacity: 0.8; }
+  100% { opacity: 1; }
+}
